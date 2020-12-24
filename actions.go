@@ -169,12 +169,3 @@ func CuentaRemove(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(200)
 	json.NewEncoder(w).Encode(results)
 }
-func GetCuentaAPI(w http.ResponseWriter, r *http.Request) {
-
-	//Allow CORS here By * or specific origin
-	w.Header().Set("Access-Control-Allow-Origin", "*")
-
-	w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
-	// return "OKOK"
-	json.NewEncoder(w).Encode("OKOK")
-}
